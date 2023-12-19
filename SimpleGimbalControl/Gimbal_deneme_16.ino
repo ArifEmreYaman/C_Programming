@@ -24,9 +24,7 @@ int roll2 = 120;
 void setup() {
   Serial.begin(9600);
   Wire.begin();
-  Serial.print("asd");
   ACC_GYR.initialize();
-  Serial.print("das");
   Serial.println(ACC_GYR.testConnection() ? "BAĞLANDI" : "BAĞLANAMADI");
   
   
@@ -64,7 +62,7 @@ void loop() {
       y= deger - 0 ;
       servo1.write(y);
       eskideger = deger;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger);
       Serial.print("/");
     }
@@ -72,7 +70,7 @@ void loop() {
       y= deger - 0 ;
       servo1.write(y);
       eskideger = deger;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger);
       Serial.print("/");
       
@@ -91,7 +89,7 @@ void loop() {
       x= deger2 - 25 ;
       servo1.write(x);
       eskideger2 = deger2;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger2);
       Serial.println("");
     } 
@@ -99,11 +97,11 @@ void loop() {
       x= deger2 - 25 ;
       servo1.write(x);
       eskideger2 = deger2;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger2);
       Serial.println("");
   } 
-/*
+
 // PİTCH
   
   if (roll1 < deger3 &&  deger3 < roll2) {    
@@ -116,7 +114,7 @@ void loop() {
       x= deger - 25 ;
       servo1.write(x);
       eskideger2 = deger2;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger2);
       Serial.println("");
     } 
@@ -124,13 +122,13 @@ void loop() {
       x= deger2 - 25 ;
       servo1.write(x);
       eskideger2 = deger2;
-        //Serial.print("x ekseni:");
+      Serial.print("x ekseni:");
       Serial.print(deger2);
       Serial.println("");
   } 
 
 
-*/
+
 
 }
 
